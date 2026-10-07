@@ -1,0 +1,8 @@
+# Dependencias del microservicio (lo que se instala en la imagen Docker).
+# Versiones fijas para que todos midamos exactamente lo mismo.
+pymupdf==1.28.2        # Motor de extracción (MuPDF) y sus bindings oficiales
+starlette==1.7.0       # Framework ASGI mínimo para la capa HTTP
+uvicorn==0.54.0        # Servidor ASGI
+httptools==0.8.0       # Parser HTTP en C para uvicorn
+uvloop==0.23.0; sys_platform != "win32"  # Event loop en C (solo Linux/macOS)
+orjson==3.12.0         # Serialización JSON rápida

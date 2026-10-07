@@ -1,0 +1,24 @@
+[project]
+name = "pdf-extractor"
+version = "1.0.0"
+description = "Microservicio de extracción de PDF a Markdown (TP Test de Carga, UTN FRSR)"
+requires-python = ">=3.13"
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "scripts"]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+extend-exclude = [".venv"]
+
+[tool.ruff.lint]
+# E/W: estilo PEP 8 · F: errores (imports sin usar, nombres indefinidos)
+# I: orden de imports · B: bugs comunes · UP: sintaxis moderna
+# SIM: simplificaciones · N: nombres PEP 8 · RUF: reglas propias de ruff
+select = ["E", "W", "F", "I", "B", "UP", "SIM", "N", "RUF"]
+# Los textos del proyecto están en castellano: tildes y comillas tipográficas
+# en comentarios y mensajes son intencionales, no caracteres ambiguos.
+ignore = ["RUF001", "RUF002", "RUF003"]

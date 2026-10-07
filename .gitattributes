@@ -1,0 +1,9 @@
+# Todos los archivos de texto con fin de línea LF, en cualquier sistema.
+# Es crítico para lo que se ejecuta en contenedores Linux (run.sh,
+# haproxy.cfg): si git en Windows los convierte a CRLF, sh falla con
+# "set: Illegal option -" y HAProxy puede no leer bien la configuración.
+* text=auto eol=lf
+
+# Binarios: git no debe tocarlos.
+*.pdf binary
+*.png binary

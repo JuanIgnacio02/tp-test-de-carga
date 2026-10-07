@@ -1,0 +1,23 @@
+# Entorno virtual y cachés de Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Configuración local (los valores por defecto están en docker-compose.yml)
+.env
+
+# Resultados crudos de las pruebas de carga: se regeneran en cada corrida y
+# los .bin/.csv de Vegeta pesan bastante. Los que se citan en el informe se
+# copian a docs/resultados/.
+tests/stress/results/*
+!tests/stress/results/.gitkeep
+
+# Configuración local de editores y herramientas
+.claude/
+.vscode/
+.idea/
+
+# PDFs sustitutos generados por scripts/generate_test_pdfs.py
+tests/stress/pdfs-sustitutos/

@@ -1,0 +1,16 @@
+# Dependencias para desarrollo: tests, lint y scripts de investigación.
+# No van en la imagen Docker.
+-r requirements.txt
+
+# Tests y calidad de código
+pytest==9.1.1
+httpx==0.28.1          # Cliente HTTP que usa el TestClient de Starlette
+ruff==0.16.10
+
+# Scripts de investigación (scripts/): librerías comparadas y gráficos
+pymupdf4llm==1.28.2
+pdfplumber==0.11.10
+pypdf==6.19.0
+pypdfium2==5.14.0
+psutil==7.2.2
+matplotlib==3.11.2
